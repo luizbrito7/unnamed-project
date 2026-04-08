@@ -124,17 +124,18 @@
 
 .dark {
     /* === BASE === */
-    /* Pure black #000000 */
-    --background: oklch(0 0 0);
+    /* GitHub dark #0d1117 */
+    --background: oklch(0.13 0.012 264);
     /* Near-white #F4F4F6 */
     --foreground: oklch(0.96 0.003 270);
 
     /* === CARD === */
-    --card: oklch(0.12 0.005 275);
+    /* GitHub overlay #161b22 */
+    --card: oklch(0.17 0.010 265);
     --card-foreground: oklch(0.96 0.003 270);
 
     /* === POPOVER === */
-    --popover: oklch(0.12 0.005 275);
+    --popover: oklch(0.17 0.010 265);
     --popover-foreground: oklch(0.96 0.003 270);
 
     /* === PRIMARY — Near-white #F4F4F6 === */
@@ -170,7 +171,7 @@
     --chart-5: oklch(0 0 0);            /* black #000000 */
 
     /* === SIDEBAR === */
-    --sidebar: oklch(0.12 0.005 275);
+    --sidebar: oklch(0.17 0.010 265);
     --sidebar-foreground: oklch(0.96 0.003 270);
     --sidebar-primary: oklch(0.96 0.003 270);
     --sidebar-primary-foreground: oklch(0 0 0);
