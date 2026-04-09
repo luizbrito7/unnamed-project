@@ -1,10 +1,10 @@
-# CresceRadar — Índice de Issues
+# Unnamed — Índice de Issues
 
 ## Fase 1: Prototype (Protótipo Visual)
 
 | # | Issue | Status |
 |---|-------|--------|
-| 01 | [Layout Global (AppSidebar, AppHeader, RoleSwitcher, Breadcrumb)](01-prototype-global-layout.md) | pendente |
+| 01 | [Layout Global (AppSidebar, AppHeader, RoleSwitcher, Breadcrumb)](01-prototype-global-layout.md) | ✅ concluída |
 | 02 | [Página de Login](02-prototype-login-page.md) | pendente |
 | 03 | [Página de Cadastro](03-prototype-register-page.md) | pendente |
 | 04 | [Páginas de Recuperação e Redefinição de Senha](04-prototype-password-recovery-pages.md) | pendente |
