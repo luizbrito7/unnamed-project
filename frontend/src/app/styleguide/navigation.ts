@@ -23,6 +23,7 @@ export const navigation: NavSection[] = [
       { name: "RoleSwitcher", href: "/styleguide/components/role-switcher" },
       { name: "ThemeToggle", href: "/styleguide/components/theme-toggle" },
       { name: "BreadcrumbNav", href: "/styleguide/components/breadcrumb-nav" },
+      { name: "LoginForm", href: "/styleguide/components/login-form" },
     ]
   }
 ]
