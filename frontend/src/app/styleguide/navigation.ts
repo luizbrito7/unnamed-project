@@ -18,7 +18,11 @@ export const navigation: NavSection[] = [
   {
     title: "Components",
     items: [
-      // Components will be added here by Prompt 2
+      { name: "AppSidebar", href: "/styleguide/components/app-sidebar" },
+      { name: "AppHeader", href: "/styleguide/components/app-header" },
+      { name: "RoleSwitcher", href: "/styleguide/components/role-switcher" },
+      { name: "ThemeToggle", href: "/styleguide/components/theme-toggle" },
+      { name: "BreadcrumbNav", href: "/styleguide/components/breadcrumb-nav" },
     ]
   }
 ]

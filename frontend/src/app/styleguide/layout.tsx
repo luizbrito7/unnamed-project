@@ -2,8 +2,27 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
+import { Palette, Component } from "lucide-react"
 import { navigation } from "./navigation"
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarInset,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
+  SidebarRail,
+} from "@/components/ui/sidebar"
+
+const sectionIcons: Record<string, typeof Palette> = {
+  Foundation: Palette,
+  Components: Component,
+}
 
 export default function StyleguideLayout({
   children,
@@ -13,47 +32,63 @@ export default function StyleguideLayout({
   const pathname = usePathname()
 
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar - Fixed */}
-      <aside className="w-64 border-r bg-card p-6 flex flex-col gap-6 fixed top-0 left-0 h-screen overflow-y-auto">
-        <div>
-          <Link href="/styleguide" className="text-xl font-bold tracking-tight">
-            Design System
-          </Link>
-        </div>
+    <SidebarProvider>
+      <Sidebar collapsible="icon">
+        <SidebarHeader>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                size="lg"
+                render={<Link href="/styleguide" />}
+                tooltip="Design System"
+              >
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                  <Palette className="size-4" />
+                </div>
+                <div className="flex flex-col gap-0.5 leading-none">
+                  <span className="font-semibold">Design System</span>
+                  <span className="text-xs text-muted-foreground">Styleguide</span>
+                </div>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarHeader>
 
-        <nav className="flex flex-col gap-6">
-          {navigation.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                {section.title}
-              </h3>
-              <ul className="flex flex-col gap-1">
-                {section.items.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        "block px-3 py-2 rounded-md text-sm transition-colors",
-                        pathname === item.href
-                          ? "bg-primary text-primary-foreground font-medium"
-                          : "text-foreground hover:bg-muted"
-                      )}
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </nav>
-      </aside>
+        <SidebarContent>
+          {navigation.map((section) => {
+            const Icon = sectionIcons[section.title] ?? Component
+            return (
+              <SidebarGroup key={section.title}>
+                <SidebarGroupLabel>{section.title}</SidebarGroupLabel>
+                <SidebarGroupContent>
+                  <SidebarMenu className="gap-1">
+                    {section.items.map((item) => (
+                      <SidebarMenuItem key={item.href}>
+                        <SidebarMenuButton
+                          render={<Link href={item.href} />}
+                          isActive={pathname === item.href}
+                          tooltip={item.name}
+                        >
+                          <Icon className="size-4" />
+                          <span>{item.name}</span>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    ))}
+                  </SidebarMenu>
+                </SidebarGroupContent>
+              </SidebarGroup>
+            )
+          })}
+        </SidebarContent>
 
-      {/* Main content - offset by sidebar width */}
-      <main className="flex-1 ml-64 overflow-auto">
-        {children}
-      </main>
-    </div>
+        <SidebarRail />
+      </Sidebar>
+
+      <SidebarInset>
+        <main className="flex-1 overflow-auto">
+          {children}
+        </main>
+      </SidebarInset>
+    </SidebarProvider>
   )
 }

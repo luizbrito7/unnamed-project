@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -19,6 +18,7 @@ import {
   // UI & misc
   Sun, Moon, User, Users, Mail, Phone, Globe, Home, Star, Bookmark, Heart, Share2, Link, QrCode, ScanLine, MoreHorizontal, MoreVertical, Loader2,
 } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 import type { LucideIcon } from "lucide-react"
 
 function IconTile({ icon: Icon, name }: { icon: LucideIcon; name: string }) {
@@ -85,14 +85,6 @@ function ShadowExample({ label, className }: { label: string; className: string 
 }
 
 export default function StyleguidePage() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  const toggleDark = () => {
-    const next = !darkMode
-    setDarkMode(next)
-    document.documentElement.classList.toggle("dark", next)
-  }
-
   return (
     <div className="p-8 max-w-5xl">
       {/* Header */}
@@ -103,10 +95,7 @@ export default function StyleguidePage() {
             Visual reference for the design system
           </p>
         </div>
-        <Button variant="outline" size="sm" onClick={toggleDark} className="gap-2">
-          {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          {darkMode ? "Light" : "Dark"}
-        </Button>
+        <ThemeToggle />
       </div>
 
       {/* Colors - Semantic */}
