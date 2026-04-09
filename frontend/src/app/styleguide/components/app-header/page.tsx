@@ -8,7 +8,7 @@ import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 
 export default function AppHeaderShowcase() {
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="max-w-5xl">
       <h1 className="text-3xl font-bold tracking-tight">AppHeader</h1>
       <p className="text-muted-foreground mt-1 mb-8">
         Header da aplicação com trigger da sidebar, breadcrumb, avatar do usuário e seletor de papel.

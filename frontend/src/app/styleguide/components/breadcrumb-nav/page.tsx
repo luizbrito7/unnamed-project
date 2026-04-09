@@ -5,7 +5,7 @@ import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 // We use mock pathname via Next.js navigation, so we show static examples
 export default function BreadcrumbNavShowcase() {
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="max-w-5xl">
       <h1 className="text-3xl font-bold tracking-tight">BreadcrumbNav</h1>
       <p className="text-muted-foreground mt-1 mb-8">
         Breadcrumb dinâmico baseado na rota atual. Usa <code className="bg-muted px-1.5 py-0.5 rounded text-xs">usePathname()</code> do Next.js.

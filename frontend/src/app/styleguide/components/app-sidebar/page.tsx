@@ -25,7 +25,7 @@ const managerMenuItems = [
 
 export default function AppSidebarShowcase() {
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="max-w-5xl">
       <h1 className="text-3xl font-bold tracking-tight">AppSidebar</h1>
       <p className="text-muted-foreground mt-1 mb-8">
         Sidebar principal da aplicação com navegação, toggle de papel e modo colapsável por ícone.

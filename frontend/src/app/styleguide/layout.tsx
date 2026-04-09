@@ -85,9 +85,9 @@ export default function StyleguideLayout({
       </Sidebar>
 
       <SidebarInset>
-        <main className="flex-1 overflow-auto">
+        <div className="flex-1 overflow-auto p-8">
           {children}
-        </main>
+        </div>
       </SidebarInset>
     </SidebarProvider>
   )
