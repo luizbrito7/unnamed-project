@@ -5,7 +5,7 @@
 | # | Issue | Status |
 |---|-------|--------|
 | 01 | [Layout Global (AppSidebar, AppHeader, RoleSwitcher, Breadcrumb)](01-prototype-global-layout.md) | ✅ concluída |
-| 02 | [Página de Login](02-prototype-login-page.md) | pendente |
+| 02 | [Página de Login](02-prototype-login-page.md) | ✅ concluída |
 | 03 | [Página de Cadastro](03-prototype-register-page.md) | pendente |
 | 04 | [Páginas de Recuperação e Redefinição de Senha](04-prototype-password-recovery-pages.md) | pendente |
 | 05 | [Página Dashboard](05-prototype-dashboard-page.md) | pendente |
