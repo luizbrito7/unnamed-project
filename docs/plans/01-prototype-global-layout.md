@@ -2,7 +2,7 @@
 
 ## Descricao detalhada
 
-Implementar a estrutura de layout global da aplicacao autenticada do CresceRadar. O layout envolve todas as paginas dentro do route group `(app)` e e composto por:
+Implementar a estrutura de layout global da aplicacao autenticada do Unnamed. O layout envolve todas as paginas dentro do route group `(app)` e e composto por:
 
 - **AppSidebar**: Sidebar com navegacao principal (Dashboard, Skills, PDI, Certificacoes, 1:1s, Feedback). O item "Time" aparece condicionalmente quando o papel ativo e gestor. Responsiva — vira drawer (Sheet) no mobile.
 - **AppHeader**: Header com trigger da sidebar, breadcrumb contextual, avatar do usuario, nome e seletor de papel.

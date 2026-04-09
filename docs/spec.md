@@ -1,4 +1,4 @@
-# CresceRadar — Especificação Completa
+# Unnamed — Especificação Completa
 
 Plataforma de gestão de PDI (Plano de Desenvolvimento Individual) para colaboradores e gestores.
 
@@ -8,7 +8,7 @@ Plataforma de gestão de PDI (Plano de Desenvolvimento Individual) para colabora
 
 ### Objetivo Principal
 
-O CresceRadar é uma plataforma web para facilitar a gestão de Planos de Desenvolvimento Individual (PDI). Permite que colaboradores criem, acompanhem e atualizem seus planos de desenvolvimento profissional, enquanto gestores acompanham o progresso de seus liderados e fornecem feedback estruturado.
+O Unnamed é uma plataforma web para facilitar a gestão de Planos de Desenvolvimento Individual (PDI). Permite que colaboradores criem, acompanhem e atualizem seus planos de desenvolvimento profissional, enquanto gestores acompanham o progresso de seus liderados e fornecem feedback estruturado.
 
 ### Proposta de Valor
 
